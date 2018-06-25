@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 741331925}
   - component: {fileID: 741331924}
   - component: {fileID: 741331923}
+  - component: {fileID: 741331926}
   m_Layer: 5
   m_Name: LoginButton
   m_TagString: Untagged
@@ -328,13 +329,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: changeToScene
+      - m_Target: {fileID: 741331926}
+        m_MethodName: changeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -374,6 +375,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 741331921}
+--- !u!114 &741331926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 741331921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47db8ead41cc284896f01671806c9ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &810706232
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +398,7 @@ GameObject:
   - component: {fileID: 810706235}
   - component: {fileID: 810706234}
   - component: {fileID: 810706237}
+  - component: {fileID: 810706238}
   m_Layer: 5
   m_Name: ViewProduct
   m_TagString: Untagged
@@ -451,13 +464,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 5
+      - m_Target: {fileID: 810706237}
+        m_MethodName: changeScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -508,7 +521,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47db8ead41cc284896f01671806c9ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+--- !u!114 &810706238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810706232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c923338cc3760ab4183d702839ee8d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backScene: 0
 --- !u!1 &1316673157
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +544,7 @@ GameObject:
   - component: {fileID: 1316673161}
   - component: {fileID: 1316673160}
   - component: {fileID: 1316673159}
+  - component: {fileID: 1316673162}
   m_Layer: 5
   m_Name: RegisterButton
   m_TagString: Untagged
@@ -585,8 +610,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: changeToScene
+      - m_Target: {fileID: 1316673162}
+        m_MethodName: changeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -631,6 +656,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1316673157}
+--- !u!114 &1316673162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1316673157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47db8ead41cc284896f01671806c9ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1318178263
 GameObject:
   m_ObjectHideFlags: 0

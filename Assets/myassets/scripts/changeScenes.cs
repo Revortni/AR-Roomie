@@ -5,13 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class changeScenes : MonoBehaviour {
-	public int sceneNumber;
-	void Start()
-	{
-		this.GetComponent<Button>().onClick.AddListener(delegate{changeScene();});
-	}
 
-	public void changeScene()
+	public void changeScene(int sceneNumber)
 	{	
 		if(SceneManager.GetActiveScene().name == "homeScreen" && sceneNumber==0)
 			Application.Quit();
