@@ -10,7 +10,11 @@ public class Login : MonoBehaviour
     public InputField Password;
     public Button Submit;
     public string[] items;
+    public Text info;
 
+    void Start(){
+       
+    }
 
     // Use this for initialization
     void Awake()
@@ -31,6 +35,12 @@ public class Login : MonoBehaviour
 
     public void CallLoginin()
     {
+        if(Username.text=="" || Password.text=="")
+        {
+            info.color = Color.red;
+            info.text="Please fill up all the fields";
+            return;
+        }
         StartCoroutine(Loginin());
     }
 
@@ -41,7 +51,7 @@ public class Login : MonoBehaviour
 
 
     IEnumerator Loginin()
-    {
+    {   
         WWWForm form = new WWWForm();
         form.AddField("name", Username.text);
         form.AddField("password", Password.text);
@@ -50,13 +60,20 @@ public class Login : MonoBehaviour
 
         yield return www;
         //Debug.Log(" successfull");
-       string Playersdata = www.text;
-        PlayerPrefs.SetString("usersinfo", Playersdata);
-        PlayerPrefs.SetString("Username", Username.text);
-       
-        
-        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
-
+        string Playerdata = www.text;
+        PlayerPrefs.SetString("userinfo", Playerdata);
+        PlayerPrefs.SetString("username", Username.text);
+        if(Playerdata == "1")
+        {
+            info.color = Color.red;
+            info.text="Incorrect username or password. Please try again.";
+        }
+        else
+        {
+            info.color = Color.green;
+            info.text = "Login Successful";
+            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+        }
     }
 
    

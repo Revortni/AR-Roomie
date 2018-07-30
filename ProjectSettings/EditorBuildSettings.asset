@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/scenes/accountUI/loginandsignup.unity
+    path: Assets/scenes/accountUI/home.unity
     guid: 90b1a9866e8ce92429b7d7378bb7eb2c
   - enabled: 1
     path: Assets/scenes/accountUI/Register.unity
@@ -15,11 +15,14 @@ EditorBuildSettings:
     path: Assets/scenes/accountUI/login.unity
     guid: 942c1e5af1eda294dbf6a85ac416686b
   - enabled: 1
+    path: Assets/scenes/accountUI/profile.unity
+    guid: 2938ca1d7d80ad04a8277e1c14c3917d
+  - enabled: 1
     path: Assets/scenes/panel.unity
     guid: fef1f4c821644f342aba3d5f79586676
   - enabled: 0
-    path: Assets/scenes/homeScreen.unity
-    guid: 5e57ceb90d5d18944bc879589ead0dff
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/scenes/beanbag.unity
     guid: 87f8250c0d50e3b4d820165c55d38447
