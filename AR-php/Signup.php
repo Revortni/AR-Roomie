@@ -13,10 +13,8 @@
 	}
 
 	//Variable from the user	
-	$username = $_POST["name"];
-	 //"Lucas Test AC";
-	
-	$password = $_POST["password"];//"123456";
+	$username = $_POST["name"];	
+	$password = $_POST["password"];
 	$email = $_POST["Email"];
 	
 	
@@ -25,7 +23,7 @@
 			VALUES ('".$username."','".$email."','".$password."')";
 	$result = mysqli_query($conn ,$sql);
 	
-	if(!result) echo "there was an error";
+	if(!result) echo 0;
 	else echo "Everything ok.";
 
 ?>

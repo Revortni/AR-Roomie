@@ -29,7 +29,7 @@ public class Usersdata : MonoBehaviour
        
         WWWForm form = new WWWForm();
         form.AddField("name", username);
-        WWW itemsdata = new WWW("http://localhost/AR/savedata.php",form);
+        WWW itemsdata = new WWW("http://192.168.1.5/AR/savedata.php",form);
         yield return itemsdata;
         Debug.Log(itemsdata.text);
        

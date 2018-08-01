@@ -6,15 +6,18 @@ using UnityEngine.UI;
 
 public class ProfileLoader : MonoBehaviour {
 
-	// IEnumerator Start(){
-	// 	WWW profileData = new WWW("http://localhost/ar/profile.php");
-	// 	yield return profileData
-	// 	string info = profileData.text;
-	// 	Debug.log(info);
-	// 	info = info.Split(';');
-	// }
+	public Text name;
+	public Text id;
+	private string[] data;
+	void Start(){
+        string username = PlayerPrefs.GetString("username");
+        string info = PlayerPrefs.GetString("userinfo");
+		data = info.Split(',');
+		id.text = data[0];
+		name.text = "Welcome "+data[1].Split(':')[1];
+	}
 	
-	// void getDataVal(string data, string index){
-	// 	string value = data.Substring(data.IndexOf(index)+index.Length);
-	// }
+	void getDataVal(string data, string index){
+		string value = data.Substring(data.IndexOf(index)+index.Length);
+	}
 }

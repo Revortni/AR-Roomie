@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+	$servername = "localhost";
 	$server_username =  "root";
 	$server_password = "";
 	$dbName = "ar";
@@ -14,20 +14,26 @@ $query = " SELECT * FROM userinfo WHERE Name ='$username'";
 
 $result = mysqli_query($conn ,$query) or die('Query failed:'.mysqli_error());
 
-if(mysqli_num_rows($result)>0){
-	$check=0;
-	 while($row = mysqli_fetch_assoc($result)){
-		 	if ($row['Password']==$password){
-		 		$check=1;
-		 		echo "id:".$row['Name']."|material:".$row['Password']."|cost:".$row['Email'];
-		 	}
+if(!$result){
+	echo 1;
+}
+else
+{
+	if(mysqli_num_rows($result)>0){
+		$check=0;
+		 while($row = mysqli_fetch_assoc($result)){
+			 	if ($row['Password']==$password){
+			 		$check=1;
+			 		echo "id:".$row['id'].",name:".$row['Name'];
+			 	}
+		}
+		if($check==0)
+		{
+			echo 1;
+		}
 	}
-	if($check==0)
-	{
+	else{
 		echo 1;
 	}
-}
-else{
-	echo 1;
 }
 ?>

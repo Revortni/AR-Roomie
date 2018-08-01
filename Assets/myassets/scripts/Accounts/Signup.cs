@@ -79,7 +79,7 @@ public class Signup : MonoBehaviour
 
     public void CallRegistration()
     {
-        string url = "http://localhost/AR/Signup.php" ;
+        string url = "http://192.168.1.5/AR/Signup.php" ;
         StartCoroutine(Registration());
     }
     
@@ -91,17 +91,18 @@ public class Signup : MonoBehaviour
             form.AddField("name", Username.text);
             form.AddField("password", Password.text);
             form.AddField("Email", EmailField.text);
-            WWW www = new WWW("http://localhost/AR/Signup.php", form);
+            WWW www = new WWW("http://192.168.1.5/AR/Signup.php", form);
             yield return www;
             if (www.text == "0")
             {
-                Debug.Log("User creation Failed.Error #" + www.text);
+                info.text = "User creation Failed.Error #" + www.text;
                 UnityEngine.SceneManagement.SceneManager.LoadScene(0);
             }
             else
             {
                 info.color=Color.green;
-                info.text = "User created successfully.";
+                info.text = "Account created successfully.";
+                yield return new WaitForSeconds(2);
                 UnityEngine.SceneManagement.SceneManager.LoadScene(2);
             }
     }

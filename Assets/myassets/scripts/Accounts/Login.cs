@@ -56,7 +56,7 @@ public class Login : MonoBehaviour
         form.AddField("name", Username.text);
         form.AddField("password", Password.text);
 
-        WWW www = new WWW("http://localhost/AR/Login.php", form);
+        WWW www = new WWW("http://192.168.1.5/AR/Login.php", form);
 
         yield return www;
         //Debug.Log(" successfull");
