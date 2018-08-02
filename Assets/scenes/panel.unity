@@ -232,6 +232,135 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224922026528613920, guid: bd9955bdd721649419544828166c958c,
     type: 2}
   m_PrefabInternal: {fileID: 125661989}
+--- !u!1001 &445966962
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 687399681}
+    m_Modifications:
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114746113391835558, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Color: Black'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114998578139528022, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Price: Rs 1000'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777622512440210, guid: 189612733438cc44a9a6389c631fe281, type: 2}
+      propertyPath: m_Name
+      value: ListItem (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114021887723253858, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114055174234965322, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_Text
+      value: Bar Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 114260175736841952, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: a497d87dc687eb54493f446daf74206e, type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 189612733438cc44a9a6389c631fe281, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &488896756
 Prefab:
   m_ObjectHideFlags: 0
@@ -332,7 +461,7 @@ Prefab:
     - target: {fileID: 114746113391835558, guid: 189612733438cc44a9a6389c631fe281,
         type: 2}
       propertyPath: m_Text
-      value: 'Color: Brown'
+      value: 'Color: Hazelnut'
       objectReference: {fileID: 0}
     - target: {fileID: 114998578139528022, guid: 189612733438cc44a9a6389c631fe281,
         type: 2}
@@ -358,7 +487,7 @@ GameObject:
   - component: {fileID: 518412839}
   - component: {fileID: 518412838}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,12 +577,13 @@ RectTransform:
   - {fileID: 1760766493}
   - {fileID: 1263109927}
   - {fileID: 1318510395}
+  - {fileID: 1432958035}
   m_Father: {fileID: 802251088}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93.55}
+  m_AnchoredPosition: {x: 0, y: -463.55005}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &687399682
@@ -903,7 +1033,7 @@ Prefab:
     - target: {fileID: 114055174234965322, guid: 189612733438cc44a9a6389c631fe281,
         type: 2}
       propertyPath: m_Text
-      value: Sofa
+      value: Couch
       objectReference: {fileID: 0}
     - target: {fileID: 114021887723253858, guid: 189612733438cc44a9a6389c631fe281,
         type: 2}
@@ -1018,12 +1148,12 @@ Prefab:
     - target: {fileID: 114746113391835558, guid: 189612733438cc44a9a6389c631fe281,
         type: 2}
       propertyPath: m_Text
-      value: 'Color: Gray'
+      value: 'Color: Wood'
       objectReference: {fileID: 0}
     - target: {fileID: 114998578139528022, guid: 189612733438cc44a9a6389c631fe281,
         type: 2}
       propertyPath: m_Text
-      value: 'Price: Rs 4500'
+      value: 'Price: Rs 7900'
       objectReference: {fileID: 0}
     - target: {fileID: 1777622512440210, guid: 189612733438cc44a9a6389c631fe281, type: 2}
       propertyPath: m_Name
@@ -1034,6 +1164,18 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114055174234965322, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Arm Chair
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114260175736841952, guid: 189612733438cc44a9a6389c631fe281,
+        type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 3c40cb6a43db6944a86370aacd02e1f8, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 189612733438cc44a9a6389c631fe281, type: 2}
   m_IsPrefabParent: 0
@@ -1202,6 +1344,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mWorldCenterMode: 3
   mWorldCenter: {fileID: 0}
+--- !u!224 &1432958035 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224019304913223456, guid: 189612733438cc44a9a6389c631fe281,
+    type: 2}
+  m_PrefabInternal: {fileID: 445966962}
 --- !u!1 &1637916036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,8 +1529,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 740651371}
   m_HandleRect: {fileID: 740651370}
   m_Direction: 2
-  m_Value: 0.63615185
-  m_Size: 0.083866656
+  m_Value: 1
+  m_Size: 0.0729
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
