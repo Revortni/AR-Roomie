@@ -11,13 +11,10 @@ public class ProfileLoader : MonoBehaviour {
 	private string[] data;
 	void Start(){
         string username = PlayerPrefs.GetString("username");
-        string info = PlayerPrefs.GetString("userinfo");
-		data = info.Split(',');
-		id.text = data[0];
-		name.text = "Welcome "+data[1].Split(':')[1];
+        string userid= PlayerPrefs.GetString("userid");
+		
+		id.text = userid;
+		name.text = "Welcome "+username;
 	}
 	
-	void getDataVal(string data, string index){
-		string value = data.Substring(data.IndexOf(index)+index.Length);
-	}
 }

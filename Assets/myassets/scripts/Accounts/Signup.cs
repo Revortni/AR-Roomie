@@ -79,7 +79,7 @@ public class Signup : MonoBehaviour
 
     public void CallRegistration()
     {
-        string url = "http://192.168.1.5/AR/Signup.php" ;
+        string url = "http://192.168.1.2/AR/Signup.php" ;
         StartCoroutine(Registration());
     }
     
@@ -91,7 +91,7 @@ public class Signup : MonoBehaviour
             form.AddField("name", Username.text);
             form.AddField("password", Password.text);
             form.AddField("Email", EmailField.text);
-            WWW www = new WWW("http://192.168.1.5/AR/Signup.php", form);
+            WWW www = new WWW("http://192.168.1.2/AR/Signup.php", form);
             yield return www;
             if (www.text == "0")
             {
