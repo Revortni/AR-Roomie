@@ -29,3 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/couch.unity
     guid: 617c20f922f80ac47b58be27f668c398
+  - enabled: 1
+    path: Assets/scenes/Armchair.unity
+    guid: 8e2bcc12b6f97094ba98451e1099e060
+  - enabled: 1
+    path: Assets/scenes/Barchair.unity
+    guid: 96349dccb6ef9f74b977ea2db1353cf4
