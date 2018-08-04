@@ -9,18 +9,21 @@ public class TakeScreenshot : MonoBehaviour {
 	public GameObject info;
 	private bool enter = false;
 	private int x;
+
+	void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
+
 	void Start(){
 		x=0;
 		info.SetActive(false);
-		this.GetComponent<Button>().onClick.AddListener(delegate{
-			TakeAShot();
-			});
 	}
 
 	public void TakeAShot()
 	{	
-		x=0;
-		StartCoroutine ("CaptureIt");		
+
+		StartCoroutine(CaptureIt());		
 	}
 
 	IEnumerator CaptureIt()
@@ -29,16 +32,11 @@ public class TakeScreenshot : MonoBehaviour {
 		string fileName = "Screenshot" + timeStamp + ".png";
 		string path= fileName;
 		ScreenCapture.CaptureScreenshot(path);
+		yield return 0;
 		info.SetActive(true);
 		yield return new WaitForSeconds(2);
 		info.SetActive(false);
-		x=1;
 	}
 
-	void Update(){
-		if(x==1){
-			StopAllCoroutines();
-		}
-	}
 
 }
