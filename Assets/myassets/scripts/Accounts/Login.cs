@@ -73,7 +73,8 @@ public class Login : MonoBehaviour
             info.color = Color.green;
             logged=1;
             info.text = "Login Successful";
-            PlayerPrefs.SetString("userid", data[0].Split(':')[1]);
+            int id = int.Parse(data[0].Split(':')[1]);
+            PlayerPrefs.SetInt("userid",id );
             PlayerPrefs.SetString("username",data[1].Split(':')[1] );
             PlayerPrefs.SetInt("loggedin",logged);
             yield return new WaitForSeconds(1);
