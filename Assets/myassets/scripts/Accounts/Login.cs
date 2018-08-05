@@ -11,8 +11,7 @@ public class Login : MonoBehaviour
     public Text info;
     private int logged;
     void Start(){
-        logged=0;
-        PlayerPrefs.SetInt("loggedin",logged);
+        PlayerPrefs.SetInt("loggedin",0);
     }
 
     // Use this for initialization
@@ -56,7 +55,7 @@ public class Login : MonoBehaviour
         form.AddField("name", Username.text);
         form.AddField("password", Password.text);
         string[] data; 
-        WWW www = new WWW("http://192.168.1.2/AR/Login.php", form);
+        WWW www = new WWW("http://192.168.1.3/AR/Login.php", form);
 
         yield return www;
         //Debug.Log(" successfull");
@@ -71,12 +70,11 @@ public class Login : MonoBehaviour
         else
         {
             info.color = Color.green;
-            logged=1;
             info.text = "Login Successful";
             int id = int.Parse(data[0].Split(':')[1]);
             PlayerPrefs.SetInt("userid",id );
             PlayerPrefs.SetString("username",data[1].Split(':')[1] );
-            PlayerPrefs.SetInt("loggedin",logged);
+            PlayerPrefs.SetInt("loggedin",1);
             yield return new WaitForSeconds(1);
             UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         }

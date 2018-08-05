@@ -9,7 +9,7 @@ public class changeScenes : MonoBehaviour {
 
 	public void Start(){
 		if(SceneManager.GetActiveScene().name == "home"){
-			PlayerPrefs.SetInt("loggedin")=0;
+			PlayerPrefs.SetInt("loggedin",0);
 		}
 	}
 
