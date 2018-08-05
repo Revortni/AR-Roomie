@@ -20,10 +20,9 @@ public class changeScenes : MonoBehaviour {
 		if(PlayerPrefs.GetInt("loggedin")==1){
 			if(SceneManager.GetActiveScene().buildIndex==4){
 				if(scene==0){
-					scene=1;
-				} else {
-					SceneManager.LoadScene(scene);
+					scene=3;
 				}
+					SceneManager.LoadScene(scene);
 			}
 			else{
 				SceneManager.LoadScene(scene);
