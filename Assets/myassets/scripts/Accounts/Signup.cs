@@ -93,17 +93,23 @@ public class Signup : MonoBehaviour
             form.AddField("Email", EmailField.text);
             WWW www = new WWW("http://192.168.1.2/AR/Signup.php", form);
             yield return www;
-            if (www.text == "0")
-            {
-                info.text = "User creation Failed.Error #" + www.text;
-                UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-            }
-            else
-            {
-                info.color=Color.green;
-                info.text = "Account created successfully.";
-                yield return new WaitForSeconds(2);
-                UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+            if (!string.IsNullOrEmpty(www.error)){
+                Debug.Log(www.error);
+                info.color = Color.red;
+                info.text="Connection error";
+            } else {
+                        if (www.text == "0")
+                        {
+                            info.text = "User creation Failed.Error #" + www.text;
+                            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+                        }
+                        else
+                        {
+                            info.color=Color.green;
+                            info.text = "Account created successfully.";
+                            yield return new WaitForSeconds(2);
+                            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+                        }
             }
     }
 
