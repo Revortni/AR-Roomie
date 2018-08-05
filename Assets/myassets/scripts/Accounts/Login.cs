@@ -58,25 +58,30 @@ public class Login : MonoBehaviour
         WWW www = new WWW("http://192.168.1.3/AR/Login.php", form);
 
         yield return www;
-        //Debug.Log(" successfull");
-        string Playerdata = www.text;
-        data = Playerdata.Split(',');
-
-        if(Playerdata == "1")
-        {
-            info.color = Color.red;
-            info.text="Incorrect username or password. Please try again.";
-        }
-        else
-        {
-            info.color = Color.green;
-            info.text = "Login Successful";
-            int id = int.Parse(data[0].Split(':')[1]);
-            PlayerPrefs.SetInt("userid",id );
-            PlayerPrefs.SetString("username",data[1].Split(':')[1] );
-            PlayerPrefs.SetInt("loggedin",1);
-            yield return new WaitForSeconds(1);
-            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+        if (!string.IsNullOrEmpty(www.error)){
+                Debug.Log(www.error);
+                info.color = Color.red;
+                info.text="Connection error";
+        } else {
+                string Playerdata = www.text;
+                data = Playerdata.Split(',');
+        
+                if(Playerdata == "1")
+                {
+                    info.color = Color.red;
+                    info.text="Incorrect username or password. Please try again.";
+                }
+                else
+                {
+                    info.color = Color.green;
+                    info.text = "Login Successful";
+                    int id = int.Parse(data[0].Split(':')[1]);
+                    PlayerPrefs.SetInt("userid",id );
+                    PlayerPrefs.SetString("username",data[1].Split(':')[1] );
+                    PlayerPrefs.SetInt("loggedin",1);
+                    yield return new WaitForSeconds(1);
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+                }
         }
     }
 
