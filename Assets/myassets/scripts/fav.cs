@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class fav : MonoBehaviour {
 
@@ -12,7 +13,11 @@ public class fav : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		save=false;
-		this.GetComponent<Button>().onClick.AddListener(delegate{
+		if(SceneManager.GetActiveScene().name=="profile"){
+			save=true;
+			this.GetComponent<Image>().sprite = on;
+		}
+			this.GetComponent<Button>().onClick.AddListener(delegate{
 			Toggle();
 			});
 	}
@@ -40,7 +45,7 @@ public class fav : MonoBehaviour {
         form.AddField("userid", PlayerPrefs.GetInt("userid"));
         form.AddField("productid", PlayerPrefs.GetInt("productid"));
  		form.AddField("order",order);
-        WWW www = new WWW("http://192.168.1.2/AR/Order.php", form);
+        WWW www = new WWW("http://192.168.1.3/AR/Order.php", form);
         yield return www;
         Debug.Log(www.text);
     }
